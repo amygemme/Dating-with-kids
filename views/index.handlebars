@@ -17,9 +17,10 @@
         </form>
         <h3>Examples:</h3>
         <ul id="example-list" class="list-group">
-          {{#each examples}}
+          {{#each database}}
           <li data-id="{{this.id}}" class="list-group-item">
-            <a href="example/{{this.id}}">{{this.text}}</a>
+            <a href="example/{{this.id}}">{{this.email}}</a>
+            <p>{{first_name}}</p>
             <button class="btn btn-danger float-right delete">ｘ</button>
           </li>
           {{/each}}
