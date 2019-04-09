@@ -8,6 +8,8 @@ CREATE TABLE population (
     email VARCHAR(40) NOT NULL,
     age VARCHAR(40),
     number_of_kids INT,
+    kids,
+    zip_code VARCHAR(40),
     type_of_relationship VARCHAR(40),
     primary key(id)
 );
