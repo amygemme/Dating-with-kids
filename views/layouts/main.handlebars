@@ -53,54 +53,58 @@
   $(document).ready(function () {
     $('#submit').click(function submit() {
       console.log("submit")
-      var interest= $('#interest').val();
-      var gender_match= $('#genderMatch').val();
 
+      var interest = $('#interest').val();
+      var gender_match = $('#genderMatch').val();
+
+      console.log(gender_match, "array?")
       var match_man = gender_match.includes("Men");
-      var match_women = gender_match.includes("Women");
+      console.log(match_man, "men")
+      var match_woman = gender_match.includes("Women");
       var match_nonbinary = gender_match.includes("Non-binary humans");
 
-      var fun = interest = interest.includes("Occasional Fun nights out")
-      var support = interest = interest.includes("A supportive relationship")
-      var partner = interest = interest.includes("A partner to love me and my kids")
-      var unknown = interest = interest.includes("I am not sure/ depends on the person")
+      var fun = interest.includes("Occasional Fun nights out")
+      var support = interest.includes("A supportive relationship")
+      var partner = interest.includes("A partner to love me and my kids")
+      var unknown = interest.includes("I am not sure/ depends on the person")
 
       var newParent = {
         first_name: $('#name_first').val(),
         last_name: $("#name_last").val(),
         age: $("#age").val(),
         email: $('#email').val(),
-        num_Kids: $('#numKids').val(),
+        num_kids: parseInt( $('#numKids').val()),
         custody: $('#custody').val(),
         match_man: match_man,
-        match_women: match_women,
-        match_nonbinary: match_nonbinary,
-        fun: fun,
-        support: support,
-        love: partner,
-        unknown: unknown,
+         match_woman: match_woman,
+         match_nonbinary: match_nonbinary,
+         fun: fun,
+         support: support,
+         love: partner,
+         unknown: unknown,
         gender_match: $('#genderMatch').val(),
         interest: $('#interest').val(),
-        zip_code: $("#zip").val(),
-        //bio: $('#bio').val(),
+        zip_code: parseInt($("#zip").val()),
+        bio: $('#bio').val(),
 
       }
+      // console.log(num_kids)
       console.log("data stored in array");
-    console.log(newParent);
-    $.ajax("/api/dating", {
-      type: "POST",
-      data: newParent
-    }).then(
-      function () {
-        console.log("created new match");
-        // Reload the page to get the updated list
-        // location.reload();
-      }
-    );
+      console.log(newParent);
+      $.ajax("/api/dating", {
+        type: "POST",
+        data: newParent
+      }).then(
+        function () {
+          console.log("created new match");
+          // Reload the page to get the updated list
+          // location.reload();
+        }
+      );
 
-  });
+    });
 
-    })
+  })
 
 </script>
 
