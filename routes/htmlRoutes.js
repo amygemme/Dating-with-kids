@@ -26,7 +26,7 @@ module.exports = function(app) {
       // console.log("dating: ", dating_poolDB)
       
       res.render("profile", {
-        msg: "Here are the Parents!"
+        msg: "Here are your potential Mates:"
       });
     // });
   });
@@ -44,7 +44,7 @@ module.exports = function(app) {
       // console.log("dating: ", dating_poolDB)
       
       res.render("index", {
-        msg: "Home Page!"
+        msg: "Welcome"
       });
     // });
   });

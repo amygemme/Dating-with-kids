@@ -21,4 +21,5 @@ CREATE TABLE dating (
     primary key(id)
 );
 
+USE dating_poolDB;
 
