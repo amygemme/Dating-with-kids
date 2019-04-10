@@ -4,16 +4,16 @@
   <div class="survey">
     <form>
 <!--START NEW CODE-->
-<div id="picker"> </div>
-<input  id="result" value="" placeholder="DOB MM-DD-YY">
+{{!-- <div id="picker"> </div>
+<input  id="result" value="" placeholder="DOB MM-DD-YY"> --}}
       <!--  END NEW CODE-->
       <div class="form-group">
-        <label for="name"> First Name </label>
-        <input id="name" class="form-control" type="text" placeholder="First Name">
+        <label for="name_first"> First Name </label>
+        <input id="name_first" class="form-control" type="text" placeholder="First Name">
       </div>
       <div class="form-group">
           <label for="name"> Last Name </label>
-          <input id="name" class="form-control" type="text" placeholder="Last Name">
+          <input id="name_last" class="form-control" type="text" placeholder="Last Name">
         </div>  
       <div class="form-group">
           <label for="age"> Enter the date you were born </label>
@@ -24,6 +24,7 @@
         <label for="exampleFormControlInput1">Email address</label>
         <input type="email" class="form-control" id="email" placeholder="name@example.com">
       </div>
+    
       <div class="form-group">
         <label for="exampleFormControlSelect1">Number of Kids</label>
         <select class="form-control" id="NumKids">
@@ -35,6 +36,7 @@
           <option>5+</option>
         </select>
       </div>
+    
       <div class="form-group">
         <label for="exampleFormControlSelect2">I have my kids with me</label>
         <select class="form-control" id="custody">
@@ -44,7 +46,6 @@
           <option>Less than 50% of the time</option>
           <option>Rarely</option>
           <option>It varys in our family</option>
-
         </select>
       </div>
 
@@ -80,5 +81,5 @@
         <textarea class="form-control" id="bio" rows="3"></textarea>
       </div>
     </form>
-    <button onclick="submit()">Submit</button>
+    <input type="button" id="submit" value="SUBMIT"> 
   </div>
