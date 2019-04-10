@@ -1,3 +1,43 @@
 .list-group-item {
   line-height: 2.5;
 }
+*{
+  /* background-color: lightblue; */
+}
+
+body{
+  padding: 5%;
+}
+
+.survey{
+  width: 100%;
+  padding: 10%;
+  background-color: grey;
+
+}
+
+#link{
+  height: 200px;
+  width: 50%;
+  margin: auto;
+  margin-top: 5%;
+  margin-bottom: 0%;
+}
+
+#button{
+  height: 200px;
+  width: 100%;
+  font-size: 30px;
+  background-color: lightgoldenrodyellow;
+}
+#calender{
+  margin: auto;
+  padding: 4%;
+  width: 80%;
+
+}
+
+#text{
+  width: 80%;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif
+}

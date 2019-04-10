@@ -1,14 +1,14 @@
 {
   "development": {
     "username": "root",
-    "password": "password",
+    "password": "Pl@to360",
     "database": "dating_poolDB",
     "host": "localhost",
     "dialect": "mysql"
   },
   "test": {
     "username": "root",
-    "password": "password",
+    "password": "Pl@to360",
     "database": "dating_poolDB",
     "host": "localhost",
     "dialect": "mysql",
