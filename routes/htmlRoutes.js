@@ -48,6 +48,16 @@ module.exports = function(app) {
       });
     // });
   });
+  app.get("/blog", function(req, res) {
+    res.render("blog", {
+      msg: "Welcome"
+    });
+  });
+  app.get("/signinup", function(req, res){
+    res.render("signinup", {
+      msg: "Sign in or up!"
+    });
+  });
 
 
   // Load example page and pass in an example by id

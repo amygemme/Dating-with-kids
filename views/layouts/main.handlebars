@@ -29,13 +29,14 @@
 
 <nav style="background-color: rgb(13, 7, 102)">
   <div class="nav-wrapper" id="nav">
-    <a href="#!" class="brand-logo" style="padding-left: 12px;">Parent Match</a>
+    <a href="/" class="brand-logo" style="padding-left: 12px;">Parent Match</a>
     <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
     <ul class="right hide-on-med-and-down">
       <li><a href="/">Home</a></li>
-      <li><a href="/profile">Profiles</a></li>
       <li><a href="/survey">Survey</a></li>
       <li><a href="/calendar">Calendar</a></li>
+      <li><a href="/profile">Profiles</a></li>
+      <li><a href="/blog">Blog</a></li>
     </ul>
   </div>
 </nav>
@@ -66,19 +67,19 @@
   $(document).ready(function () {
     $('#submit').click(function submit() {
       console.log("submit")
-      var interest= $('#interest').val();
-      var gender_match= $('#genderMatch').val();
+      let interest= $('#interest').val();
+      let gender_match= $('#genderMatch').val();
 
-      var match_man = gender_match.includes("Men");
-      var match_women = gender_match.includes("Women");
-      var match_nonbinary = gender_match.includes("Non-binary humans");
+      let match_man = gender_match.includes("Men");
+      let match_women = gender_match.includes("Women");
+      let match_nonbinary = gender_match.includes("Non-binary humans");
 
-      var fun = interest = interest.includes("Occasional Fun nights out")
-      var support = interest = interest.includes("A supportive relationship")
-      var partner = interest = interest.includes("A partner to love me and my kids")
-      var unknown = interest = interest.includes("I am not sure/ depends on the person")
+      let fun = interest = interest.includes("Occasional fun nights out")
+      let support = interest = interest.includes("A supportive relationship")
+      let partner = interest = interest.includes("A partner to love me and my kids")
+      let unknown = interest = interest.includes("I am not sure/depends on the person")
 
-      var newParent = {
+      let newParent = {
         first_name: $('#name_first').val(),
         last_name: $("#name_last").val(),
         age: $("#age").val(),
@@ -95,8 +96,7 @@
         gender_match: $('#genderMatch').val(),
         interest: $('#interest').val(),
         zip_code: $("#zip").val(),
-        //bio: $('#bio').val(),
-
+        //bio: $('#bio').val()
       }
       console.log("data stored in array");
     console.log(newParent);
@@ -113,9 +113,7 @@
 
   });
 
-    })
+    });
 
 </script>
-
-
 </html>
