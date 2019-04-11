@@ -42,22 +42,50 @@ module.exports = function (sequelize, Sequelize) {
         len: [1, 50]
       }
     },
-    gender_self: {
-      type: Sequelize.STRING,
+    match_man: {
+      type: Sequelize.BOOLEAN,
       allowNull: false,
       validate: {
         len: [1, 50]
       }
     },
-    gender_match: {
-      type: Sequelize.STRING,
+    match_woman: {
+      type: Sequelize.BOOLEAN,
       allowNull: false,
       validate: {
         len: [1, 50]
       }
     },
-    interest: {
-      type: Sequelize.STRING,
+    match_nonbinary: {
+      type: Sequelize.BOOLEAN,
+      allowNull: false,
+      validate: {
+        len: [1, 50]
+      }
+    },
+    fun: {
+      type: Sequelize.BOOLEAN,
+      allowNull: false,
+      validate: {
+        len: [1, 50]
+      }
+    },
+    support: {
+      type: Sequelize.BOOLEAN,
+      allowNull: false,
+      validate: {
+        len: [1, 50]
+      }
+    },
+    love: {
+      type: Sequelize.BOOLEAN,
+      allowNull: false,
+      validate: {
+        len: [1, 50]
+      }
+    },
+    unknown: {
+      type: Sequelize.BOOLEAN,
       allowNull: false,
       validate: {
         len: [1, 50]
@@ -70,6 +98,20 @@ module.exports = function (sequelize, Sequelize) {
         len: [1, 50]
       }
     },
+    bio: {
+      type: Sequelize.STRING,
+      allowNull: false,
+      validate: {
+        len: [1, 400]
+      }
+    },
+    gender_self: {
+      type: Sequelize.STRING,
+      allowNull: false,
+      validate: {
+        len: [1, 50]
+      }
+    }
   });
   return Dating;
 };

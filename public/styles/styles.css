@@ -1,0 +1,102 @@
+.list-group-item {
+  line-height: 2.5;
+}
+body {
+  background-color: rgb(112, 112, 116);
+  /* background-image: url("https://cdn2.momjunction.com/wp-content/uploads/2016/03/Quotes-Dedicated-To-Single-Moms-624x416.jpg"); */
+}
+
+.motivationalPicture {
+  position: relative;
+  float: left;
+}
+
+.logsign {
+  position: relative;
+  float: right;
+  padding-top: 30px;
+}
+
+/* nav {
+  background-color: rgb(163, 22, 22) 
+} */
+
+body {
+  padding: 5%;
+}
+
+.survey {
+  width: 100%;
+  padding: 10%;
+  background-color: grey;
+  color: whitesmoke;
+}
+
+#link {
+  height: 200px;
+  width: 50%;
+  margin: auto;
+  margin-top: 5%;
+  margin-bottom: 0%;
+}
+
+#button {
+  height: 110px;
+  width: 100%;
+  font-size: 30px;
+  background-color: blanchedalmond;
+  margin-left: 10px;
+}
+
+#calender {
+  margin: auto;
+  padding: 4%;
+  width: 80%;
+}
+
+#text {
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+#welcome, .welcome {
+  text-align: center;
+}
+
+.validation input:required {
+  color: black;
+}
+
+#calendar-holder {
+  text-align: center;
+}
+
+#calendar {
+  /* position: relative; */
+  padding-top: 5px;
+}
+
+.spacing-bottom {
+  margin-bottom: 30px;
+}
+
+.calendar {
+  background-color: blanchedalmond;
+  width: 80%;
+  /* margin-left: 15%; */
+  position: relative;
+  /* text-align: center; */
+  display: inline-block;
+}
+
+.login-button-holder {
+  text-align: center;
+}
+
+#login-button {
+  display: inline-block;
+  background-color: blanchedalmond;
+  width: 40%;
+  display: inline-block;
+  padding-top: 5px;
+  padding-bottom: 5px;
+}

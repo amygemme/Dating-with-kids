@@ -1,0 +1,25 @@
+<div id="home">
+  <div class="container">
+    <div class="row">
+      <div class="col-8 offset-2">
+        <h3 id="welcome">{{msg}}</h3>
+        <h5 id="welcome" class="spacing-bottom">Remember, you got this!</h5>
+        <section style="background-color: blanchedalmond">
+          <!-- CODE TO BRING IN DATA-->
+          <ul id="example-list" class="list-group">
+            {{#each database}}
+            <li data-id="{{this.id}}" class="list-group-item">
+              <a href="example/{{this.id}}">{{this.email}}</a>
+              <p>{{first_name}}</p>
+              <button class="btn btn-danger float-right delete">ｘ</button>
+            </li>
+            {{/each}}
+          </ul>
+        </section>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="/js/index.js"></script>
