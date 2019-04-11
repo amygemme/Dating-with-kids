@@ -25,21 +25,22 @@
 
   <title>Home Page</title>
 </head>
+
 <body>
 
-<nav style="background-color: rgb(13, 7, 102)">
-  <div class="nav-wrapper" id="nav">
-    <a href="/" class="brand-logo" style="padding-left: 12px;">Parent Match</a>
-    <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
-    <ul class="right hide-on-med-and-down">
-      <li><a href="/">Home</a></li>
-      <li><a href="/survey">Survey</a></li>
-      <li><a href="/calendar">Calendar</a></li>
-      <li><a href="/profile">Profiles</a></li>
-      <li><a href="/blog">Blog</a></li>
-    </ul>
-  </div>
-</nav>
+  <nav style="background-color: rgb(13, 7, 102)">
+    <div class="nav-wrapper" id="nav">
+      <a href="/" class="brand-logo" style="padding-left: 12px;">Parent Match</a>
+      <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+      <ul class="right hide-on-med-and-down">
+        <li><a href="/">Home</a></li>
+        <li><a href="/survey">Survey</a></li>
+        <li><a href="/calendar">Calendar</a></li>
+        <li><a href="/profile">Profiles</a></li>
+        <li><a href="/blog">Blog</a></li>
+      </ul>
+    </div>
+  </nav>
 
 
   {{!-- <nav>
@@ -67,24 +68,26 @@
   $(document).ready(function () {
     $('#submit').click(function submit() {
       console.log("submit")
-      let interest= $('#interest').val();
-      let gender_match= $('#genderMatch').val();
+      let interest = $('#interest').val();
+      let gender_match = $('#genderMatch').val();
 
       let match_man = gender_match.includes("Men");
       let match_women = gender_match.includes("Women");
       let match_nonbinary = gender_match.includes("Non-binary humans");
+      console.log(interest, "interest");
 
-      let fun = interest = interest.includes("Occasional fun nights out")
-      let support = interest = interest.includes("A supportive relationship")
-      let partner = interest = interest.includes("A partner to love me and my kids")
-      let unknown = interest = interest.includes("I am not sure/depends on the person")
+      let fun = interest.includes("Occasional fun nights out")
+      let support = interest.includes("A supportive relationship")
+      let partner = interest.includes("A partner to love me and my kids")
+      let unknown = interest.includes("I am not sure/depends on the person")
 
       let newParent = {
         first_name: $('#name_first').val(),
         last_name: $("#name_last").val(),
-        age: $("#age").val(),
+        age: parseInt($("#age").val()),
         email: $('#email').val(),
-        num_Kids: $('#numKids').val(),
+        num_kids: $('#numKids').val(),
+        gender_self: $('#genderSelf').val(),
         custody: $('#custody').val(),
         match_man: match_man,
         match_women: match_women,
@@ -93,27 +96,27 @@
         support: support,
         love: partner,
         unknown: unknown,
-        gender_match: $('#genderMatch').val(),
-        interest: $('#interest').val(),
-        zip_code: $("#zip").val(),
-        //bio: $('#bio').val()
+        zip_code: parseInt($("#zip").val()),
+        bio: $('#bio').val()
       }
+      console.log($('#numKids').val(), "NumKids")
       console.log("data stored in array");
-    console.log(newParent);
-    $.ajax("/api/dating", {
-      type: "POST",
-      data: newParent
-    }).then(
-      function () {
-        console.log("created new match");
-        // Reload the page to get the updated list
-        // location.reload();
-      }
-    );
-
-  });
+      console.log(newParent);
+      $.ajax("/api/dating", {
+        type: "POST",
+        data: newParent
+      }).then(
+        function () {
+          console.log("created new match");
+          // Reload the page to get the updated list
+          // location.reload();
+        }
+      );
 
     });
 
+  });
+
 </script>
+
 </html>

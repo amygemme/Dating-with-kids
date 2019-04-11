@@ -22,13 +22,14 @@ module.exports = function(app) {
     // });
   });
   app.get("/profile", function(req, res) {
-    // db.Dating.findAll({}).then(function(dating_poolDB) {
-      // console.log("dating: ", dating_poolDB)
+    db.Dating.findAll({}).then(function(data) {
+      console.log("dating: ", data)
       
       res.render("profile", {
-        msg: "Here are your potential Mates:"
+        msg: "Here are your potential Mates:",
+        data
       });
-    // });
+    });
   });
   app.get("/intention", function(req, res) {
     // db.Dating.findAll({}).then(function(dating_poolDB) {
@@ -72,7 +73,7 @@ module.exports = function(app) {
   // });
 
   // Render 404 page for any unmatched routes
-  app.get("*", function(req, res) {
-    res.render("404");
-  });
+  // app.get("*", function(req, res) {
+  //   res.render("404");
+  // });
 };

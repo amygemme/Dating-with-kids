@@ -4,8 +4,8 @@ module.exports = function(app) {
   // Get all examples
   app.get("/api/dating", function(req, res) {
     db.Dating.findAll({}).then(function(dating) {
-      res.json(dating);
       console.log(dating,"dating")
+      res.json(dating);
     });
   });
 

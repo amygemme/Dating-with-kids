@@ -1,13 +1,13 @@
-$(document).ready(function(){
-    $.get("/api/dating")
-    // On success, run the following code
-    .then(function (data) {
-      console.log(data, "data");
-      $("#profile-area").prepend(data);
+// $(document).ready(function(){
+//     $.get("/api/dating")
+//     // On success, run the following code
+//     .then(function (data) {
+//       console.log(data, "data");
+//       $("#profile-area").prepend(data);
 
-      console.log("end of code, should display and add")
+//       console.log("end of code, should display and add")
 
-    });
+//     });
 
 
-})
+// })
